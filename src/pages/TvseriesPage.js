@@ -1,9 +1,9 @@
 import React from "react";
 import NavbarVisitor from "../components/NavbarVisitor";
 import NavbarUser from "../components/NavbarUser";
-import bgImg from "../assets/the-witcher.png";
 import { Link } from "react-router-dom";
-import img from "../assets/txtw.png";
+import bgImg from "../assets/bglacasa.png";
+import img from "../assets/lacasa.png";
 import tw from "../assets/tvseries/wtchr.png";
 import ptm from "../assets/tvseries/ptm.png";
 import got from "../assets/tvseries/got.png";
@@ -19,7 +19,7 @@ import cherno from "../assets/movies/cherno.png";
 // import mov from "../dummyData/movies.json";
 // import ts from "../dummyData/tvseries.json";
 
-function HomePage() {
+function TvseriesPage() {
   const isLogin = false;
 
   // console.log(mov.title);
@@ -43,12 +43,18 @@ function HomePage() {
           <div className="container">
             <img src={img} alt="" />
             <p className="mt-2">
-              Geralt of Rivia, a solitary monster hunter, struggles to find his
-              place in <br />a world where people often prove more wicked than
-              beast
+              Money Heist is a crime drama on Netflix - originally called La
+              Casa de Papel.
+              <br />
+              Money Heist season 3 has just been released by the streaming
+              service. The plot
+              <br /> reads: "Eight thieves take hostages and lock themselves in
+              the Royal Mint of
+              <br /> Spain as a criminal mastermind manipulates the police to
+              carry out his plan."
             </p>
             <div className="d-flex">
-              <p style={{ padding: "3px" }}>2019 </p>{" "}
+              <p style={{ padding: "3px" }}>2017 </p>
               <p className="ms-3 tvseries"> TV Series</p>
             </div>
             <button className="btn-watch mt-2">WATCH NOW !</button>
@@ -59,7 +65,7 @@ function HomePage() {
         <h4 className="text-white ms-3">Tv Series</h4>
         <div className="containerCard">
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={tw} alt="" />
               </div>
@@ -72,7 +78,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={ptm} alt="" />
               </div>
@@ -85,7 +91,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={got} alt="" />
               </div>
@@ -98,7 +104,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={mh} alt="" />
               </div>
@@ -111,7 +117,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={touch} alt="" />
               </div>
@@ -124,7 +130,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={arrow} alt="" />
               </div>
@@ -137,7 +143,6 @@ function HomePage() {
             </div>
           </Link>
         </div>
-        <h4 className="text-white ms-3">Movies</h4>
         <div className="containerCard">
           <Link to="/detailFilm">
             <div className="box mb-5">
@@ -166,7 +171,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={endgame} alt="" />
               </div>
@@ -179,7 +184,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={joker} alt="" />
               </div>
@@ -192,7 +197,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={gisae} alt="" />
               </div>
@@ -205,7 +210,7 @@ function HomePage() {
             </div>
           </Link>
           <Link to="/detailFilm">
-            <div className="box">
+            <div className="box mb-5">
               <div className="imgBx">
                 <img src={cherno} alt="" />
               </div>
@@ -223,4 +228,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default TvseriesPage;
