@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: black !important;
+  color: white !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.ctnm {
+  /* background-color: red; */
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tvseries {
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.btn-watch {
+  border: 0px;
+  color: white;
+  background-color: #e50914;
+  height: 60px;
+  width: 300px;
+  font-size: 24px;
+  font-weight: 700;
+}
