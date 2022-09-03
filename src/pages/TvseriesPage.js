@@ -31,8 +31,7 @@ function TvseriesPage() {
       <div
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(104, 106, 116, 0), rgba(0, 0, 0, 0.99)), url(${bgImg})`,
-          height: "90vh",
-          marginTop: "10vh",
+          height: "99vh",
           width: "100%",
           backgroundPosition: "center center",
           backgroundSize: "cover",

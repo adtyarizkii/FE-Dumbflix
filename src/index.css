@@ -167,3 +167,41 @@ code {
 .containerCard .box:hover .content p {
   transform: translateY(0px);
 }
+
+/* modal */
+.bg-Modal {
+  background-color: #1f1f1f;
+  display: flex;
+  width: auto;
+  height: auto;
+}
+
+.form input {
+  background: rgba(210, 210, 210, 0.25);
+  border: 2px solid #bcbcbc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.btn {
+  background: red !important;
+  border-radius: 5px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  line-height: 25px !important;
+  color: #ffffff !important;
+}
+
+.warning {
+  color: white;
+  text-align: center;
+}
+
+.btnHere {
+  border: 0px;
+  background-color: #1f1f1f;
+  color: white;
+}

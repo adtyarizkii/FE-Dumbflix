@@ -31,8 +31,7 @@ function HomePage() {
       <div
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(104, 106, 116, 0), rgba(0, 0, 0, 0.99)), url(${bgImg})`,
-          height: "90vh",
-          marginTop: "10vh",
+          height: "99vh",
           width: "100%",
           backgroundPosition: "center center",
           backgroundSize: "cover",
@@ -40,7 +39,7 @@ function HomePage() {
         }}
       >
         <div className="ctnm">
-          <div className="container">
+          <div className="container p-3">
             <img src={img} alt="" />
             <p className="mt-2">
               Geralt of Rivia, a solitary monster hunter, struggles to find his
