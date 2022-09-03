@@ -19,9 +19,21 @@ function NavbarUser() {
       >
         <Container>
           <Nav>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#tvshows">TV Shows</Nav.Link>
-            <Nav.Link href="#movies">Movies</Nav.Link>
+            <Nav.Link>
+              <Link to="/" className="navlink text-white">
+                Home
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/tvshows" className="navlink text-white">
+                TV Shows
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/movies" className="navlink text-white">
+                Movies
+              </Link>
+            </Nav.Link>
           </Nav>
           <Navbar.Brand as={Link} to="/" style={{ marginLeft: "17.5rem" }}>
             <img src={Logo} alt="" />

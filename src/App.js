@@ -5,6 +5,7 @@ import TvseriesPage from "./pages/TvseriesPage";
 import MoviesPage from "./pages/MoviesPage";
 
 function App() {
+  const isLogin = false;
   return (
     <div>
       <Routes>
