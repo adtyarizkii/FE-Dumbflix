@@ -1,6 +1,4 @@
 import React from "react";
-import NavbarVisitor from "../components/NavbarVisitor";
-import NavbarUser from "../components/NavbarUser";
 import { Link } from "react-router-dom";
 import bgImg from "../assets/bglacasa.png";
 import img from "../assets/lacasa.png";
@@ -20,18 +18,17 @@ import cherno from "../assets/movies/cherno.png";
 // import ts from "../dummyData/tvseries.json";
 
 function TvseriesPage() {
-  const isLogin = false;
-
+  const title = "Tv Shows";
+  document.title = "Dumbflix | " + title;
   // console.log(mov.title);
   //   console.log(ts);
 
   return (
     <>
-      <div>{isLogin ? <NavbarUser /> : <NavbarVisitor />}</div>
       <div
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(104, 106, 116, 0), rgba(0, 0, 0, 0.99)), url(${bgImg})`,
-          height: "99vh",
+          height: "110vh",
           width: "100%",
           backgroundPosition: "center center",
           backgroundSize: "cover",
@@ -39,18 +36,20 @@ function TvseriesPage() {
         }}
       >
         <div className="ctnm">
-          <div className="container">
+          <div className="container p-5">
             <img src={img} alt="" />
-            <p className="mt-2">
+            <p
+              className="mt-3"
+              style={{
+                textAlign: "justify",
+                width: "43%",
+              }}
+            >
               Money Heist is a crime drama on Netflix - originally called La
-              Casa de Papel.
-              <br />
-              Money Heist season 3 has just been released by the streaming
-              service. The plot
-              <br /> reads: "Eight thieves take hostages and lock themselves in
-              the Royal Mint of
-              <br /> Spain as a criminal mastermind manipulates the police to
-              carry out his plan."
+              Casa de Papel. Money Heist season 3 has just been released by the
+              streaming service. The plot reads: "Eight thieves take hostages
+              and lock themselves in the Royal Mint of Spain as a criminal
+              mastermind manipulates the police to carry out his plan."
             </p>
             <div className="d-flex">
               <p style={{ padding: "3px" }}>2017 </p>

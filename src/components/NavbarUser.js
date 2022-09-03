@@ -5,8 +5,26 @@ import UserBlank from "../assets/blank-profile.png";
 import Profil from "../assets/profile.png";
 import Pay from "../assets/bill.png";
 import LogoutIcon from "../assets/logout.svg";
+import Login from "./ModalLogin";
+import Register from "./ModalRegist";
+import { useState } from "react";
 
 function NavbarUser() {
+  const [isLogin, setIsLogin] = useState(true);
+  const [loginShow, setLoginShow] = useState(false);
+  const [registerShow, setRegisterShow] = useState(false);
+
+  const registerHere = (e) => {
+    e.preventDefault();
+    setRegisterShow(false);
+    setLoginShow(true);
+  };
+
+  const loginHere = (e) => {
+    e.preventDefault();
+    setLoginShow(false);
+    setRegisterShow(true);
+  };
   return (
     <div>
       <Navbar
@@ -39,69 +57,97 @@ function NavbarUser() {
             <img src={Logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="justify-content-end"
-          >
-            <Nav style={{ marginRight: "5%" }}>
-              <NavDropdown
-                title={
-                  <div>
+          {isLogin ? (
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className="justify-content-end"
+            >
+              <Nav style={{ marginRight: "5%" }}>
+                <NavDropdown
+                  title={
+                    <div>
+                      <img
+                        className="rounded-circle"
+                        src={UserBlank}
+                        alt="User"
+                        style={{ width: "35px", marginTop: "10px" }}
+                      />
+                    </div>
+                  }
+                  id="nav-dropdown"
+                >
+                  <NavDropdown.Item
+                    bg="dark"
+                    variant="dark"
+                    style={{ backgroundColor: "black", color: "white" }}
+                    as={Link}
+                    to="/user/profile"
+                  >
                     <img
-                      className="rounded-circle"
-                      src={UserBlank}
-                      alt="User"
-                      style={{ width: "35px", marginTop: "10px" }}
+                      src={Profil}
+                      alt="icon"
+                      style={{ width: "25px", marginRight: "5px" }}
                     />
-                  </div>
-                }
-                id="nav-dropdown"
+                    Profile
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    style={{ backgroundColor: "black", color: "white" }}
+                    as={Link}
+                    to="/pay"
+                  >
+                    <img
+                      src={Pay}
+                      alt="icon"
+                      style={{ width: "25px", marginRight: "5px" }}
+                    />
+                    Pay
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider
+                    style={{ backgroundColor: "grey", color: "white" }}
+                  />
+                  <NavDropdown.Item
+                    onClick={() => setIsLogin(false)}
+                    style={{ backgroundColor: "black", color: "white" }}
+                  >
+                    <img
+                      src={LogoutIcon}
+                      alt="icon"
+                      style={{ width: "25px", marginRight: "5px" }}
+                    />
+                    Logout
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          ) : (
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className="justify-content-end"
+            >
+              <button
+                className="btnregist me-2"
+                onClick={() => setRegisterShow(true)}
               >
-                <NavDropdown.Item
-                  bg="dark"
-                  variant="dark"
-                  style={{ backgroundColor: "black", color: "white" }}
-                  as={Link}
-                  to="/user/profile"
-                >
-                  <img
-                    src={Profil}
-                    alt="icon"
-                    style={{ width: "25px", marginRight: "5px" }}
-                  />
-                  Profile
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  style={{ backgroundColor: "black", color: "white" }}
-                  as={Link}
-                  to="/user/my-list-film"
-                >
-                  <img
-                    src={Pay}
-                    alt="icon"
-                    style={{ width: "25px", marginRight: "5px" }}
-                  />
-                  Pay
-                </NavDropdown.Item>
-                <NavDropdown.Divider
-                  style={{ backgroundColor: "grey", color: "white" }}
-                />
-                <NavDropdown.Item
-                  // onClick={logout}
-                  style={{ backgroundColor: "black", color: "white" }}
-                >
-                  <img
-                    src={LogoutIcon}
-                    alt="icon"
-                    style={{ width: "25px", marginRight: "5px" }}
-                  />
-                  Logout
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
+                Register
+              </button>
+              <button className="btnlogin" onClick={() => setLoginShow(true)}>
+                Login
+              </button>
+            </Navbar.Collapse>
+          )}
         </Container>
       </Navbar>
+      <Login
+        loginHere={loginHere}
+        loginShow={loginShow}
+        setLoginShow={setLoginShow}
+        isLogin={setIsLogin}
+      />
+      <Register
+        registerHere={registerHere}
+        registerShow={registerShow}
+        setRegisterShow={setRegisterShow}
+      />
     </div>
   );
 }

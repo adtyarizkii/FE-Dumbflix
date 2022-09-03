@@ -2,7 +2,20 @@ import React from "react";
 import { Modal, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-export default function ModalLogin({ loginShow, setLoginShow, loginHere }) {
+export default function ModalLogin({
+  loginShow,
+  setLoginShow,
+  loginHere,
+  setIsLogin,
+}) {
+  function ShowPass() {
+    let x = document.getElementById("ShowPass");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
   return (
     <Modal
       size="md"
@@ -38,13 +51,27 @@ export default function ModalLogin({ loginShow, setLoginShow, loginHere }) {
                 type="password"
                 placeholder="Password"
                 name="password"
+                id="ShowPass"
                 // value={password}
                 // onChange={handleChange}
                 className="px-3 py-2 mt-3"
               />
             </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Show"
+                onClick={ShowPass}
+                className="mt-3"
+              />
+              <label for="Show" className="ms-1">
+                Show Password
+              </label>
+            </div>
             <div className="d-grid gap-2 mt-3">
-              <button className="btn">Login</button>
+              <button className="btn" onClick={() => setIsLogin(true)}>
+                Login
+              </button>
               <p className="warning">
                 Don't have an account?
                 <button onClick={loginHere} className="btnHere">

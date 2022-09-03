@@ -7,6 +7,14 @@ export default function ModalRegist({
   setRegisterShow,
   registerHere,
 }) {
+  function ShowPass() {
+    let x = document.getElementById("ShowPass");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
   return (
     <Modal
       size="md"
@@ -42,6 +50,7 @@ export default function ModalRegist({
                 type="password"
                 placeholder="Password"
                 name="password"
+                id="ShowPass"
                 // value={password}
                 // onChange={handleChange}
                 className="px-3 py-2 mt-3"
@@ -79,8 +88,19 @@ export default function ModalRegist({
                 className="px-3 py-2 mt-3"
               />
             </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Show"
+                onClick={ShowPass}
+                className="mt-3"
+              />
+              <label for="Show" className="ms-1">
+                Show Password
+              </label>
+            </div>
             <div className="d-grid gap-2 mt-3">
-              <button className="btn">Register</button>
+              <button className="btnRegister">Register</button>
               <p className="warning">
                 Already have an account?
                 <button onClick={registerHere} className="btnHere">

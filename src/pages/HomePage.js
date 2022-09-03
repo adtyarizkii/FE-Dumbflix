@@ -1,6 +1,4 @@
 import React from "react";
-import NavbarVisitor from "../components/NavbarVisitor";
-import NavbarUser from "../components/NavbarUser";
 import bgImg from "../assets/the-witcher.png";
 import { Link } from "react-router-dom";
 import img from "../assets/txtw.png";
@@ -20,18 +18,17 @@ import cherno from "../assets/movies/cherno.png";
 // import ts from "../dummyData/tvseries.json";
 
 function HomePage() {
-  const isLogin = false;
-
+  const title = "Home";
+  document.title = "Dumbflix | " + title;
   // console.log(mov.title);
   //   console.log(ts);
 
   return (
     <>
-      <div>{isLogin ? <NavbarUser /> : <NavbarVisitor />}</div>
       <div
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(104, 106, 116, 0), rgba(0, 0, 0, 0.99)), url(${bgImg})`,
-          height: "99vh",
+          height: "110vh",
           width: "100%",
           backgroundPosition: "center center",
           backgroundSize: "cover",
@@ -39,12 +36,17 @@ function HomePage() {
         }}
       >
         <div className="ctnm">
-          <div className="container p-3">
+          <div className="container p-5">
             <img src={img} alt="" />
-            <p className="mt-2">
+            <p
+              className="mt-3"
+              style={{
+                textAlign: "justify",
+                width: "43%",
+              }}
+            >
               Geralt of Rivia, a solitary monster hunter, struggles to find his
-              place in <br />a world where people often prove more wicked than
-              beast
+              place in a world where people often prove more wicked than beast
             </p>
             <div className="d-flex">
               <p style={{ padding: "3px" }}>2019 </p>{" "}

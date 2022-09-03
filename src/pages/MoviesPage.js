@@ -1,6 +1,4 @@
 import React from "react";
-import NavbarVisitor from "../components/NavbarVisitor";
-import NavbarUser from "../components/NavbarUser";
 import { Link } from "react-router-dom";
 import bgImg from "../assets/bgjoker.png";
 import img from "../assets/txtjoker.png";
@@ -20,18 +18,17 @@ import cherno from "../assets/movies/cherno.png";
 // import ts from "../dummyData/tvseries.json";
 
 function MoviesPage() {
-  const isLogin = false;
-
+  const title = "Movies";
+  document.title = "Dumbflix | " + title;
   // console.log(mov.title);
   //   console.log(ts);
 
   return (
     <>
-      <div>{isLogin ? <NavbarUser /> : <NavbarVisitor />}</div>
       <div
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(104, 106, 116, 0), rgba(0, 0, 0, 0.99)), url(${bgImg})`,
-          height: "99vh",
+          height: "110vh",
           width: "100%",
           backgroundPosition: "center center",
           backgroundSize: "cover",
@@ -39,15 +36,19 @@ function MoviesPage() {
         }}
       >
         <div className="ctnm">
-          <div className="container">
+          <div className="container p-5">
             <img src={img} alt="" />
-            <p className="mt-2">
+            <p
+              className="mt-3"
+              style={{
+                textAlign: "justify",
+                width: "43%",
+              }}
+            >
               In Gotham City, mentally troubled comedian Arthur Fleck is
-              <br />
-              disregarded and mistreated by society. He then embarks on a<br />
+              disregarded and mistreated by society. He then embarks on a
               downward spiral of revolution and bloody crime. This path brings
-              him
-              <br /> face-to-face with his alter-ego: the Joker.
+              him face-to-face with his alter-ego: the Joker.
             </p>
             <div className="d-flex">
               <p style={{ padding: "3px" }}>2019 </p>
