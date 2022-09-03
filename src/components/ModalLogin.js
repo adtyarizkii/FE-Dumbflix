@@ -1,6 +1,5 @@
 import React from "react";
 import { Modal, Alert } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 
 export default function ModalLogin({
   loginShow,

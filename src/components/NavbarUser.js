@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate as navigate } from "react-router-dom";
 import Logo from "../assets/dumbflix-logo.png";
 import UserBlank from "../assets/blank-profile.png";
 import Profil from "../assets/profile.png";
@@ -141,7 +141,7 @@ function NavbarUser() {
         loginHere={loginHere}
         loginShow={loginShow}
         setLoginShow={setLoginShow}
-        isLogin={setIsLogin}
+        setIsLogin={setIsLogin}
       />
       <Register
         registerHere={registerHere}

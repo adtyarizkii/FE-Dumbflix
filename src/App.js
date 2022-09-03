@@ -6,6 +6,7 @@ import MoviesPage from "./pages/MoviesPage";
 import NotFound from "./components/NotFound";
 import NavbarUser from "./components/NavbarUser";
 import Profile from "./pages/Profile";
+import Upgrade from "./pages/Upgrade";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/tvshows" element={<TvseriesPage />} />
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/user/profile" element={<Profile />} />
+        <Route path="/pay" element={<Upgrade />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
