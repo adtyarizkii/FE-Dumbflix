@@ -2,6 +2,9 @@ import { React, useRef, useState } from "react";
 import clip from "../assets/clip.png";
 
 function Upgrade() {
+  const title = "Be Premium";
+  document.title = "Dumbflix | " + title;
+
   const [previewSrc, setPreviewSrc] = useState(null);
   const [file, setFile] = useState(null);
 

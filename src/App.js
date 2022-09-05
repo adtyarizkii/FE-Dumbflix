@@ -7,6 +7,7 @@ import NotFound from "./components/NotFound";
 import NavbarUser from "./components/NavbarUser";
 import Profile from "./pages/Profile";
 import Upgrade from "./pages/Upgrade";
+import DetailPage from "./pages/DetailPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/user/profile" element={<Profile />} />
         <Route path="/pay" element={<Upgrade />} />
+        <Route path="/detailFilm" element={<DetailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
